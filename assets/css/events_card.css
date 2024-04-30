@@ -1,0 +1,101 @@
+/* Event Card Styles */
+.event-card {
+    background: #fff; /* White background */
+    border-radius: 15px;
+    border: 1px solid #000; /* Thin black border */
+    box-shadow: 0 10px 20px rgba(207, 233, 252, 0.984);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0; /* Start with cards hidden */
+    transform: translateY(20px); /* Initial position */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.event-card .event-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.event-card .event-img:hover img {
+    transform: scale(1.05);
+}
+
+.event-card .event-info {
+    padding: 20px;
+}
+
+.event-card .event-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Dark text color */
+}
+
+.event-card .event-description {
+    color: #555; /* Slightly darker text color */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.event-card .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.event-card .event-tag {
+    background: #f9f8f8; /* Light gray background */
+    color: #555; /* Slightly darker text color */
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(182, 232, 254, 0.612); /* Stronger shadow effect */
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+
+.event-card .register-button {
+    background: linear-gradient(to right, #111111, #333333); /* Black gradient background */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    cursor: pointer;
+    width: 100%;
+}
+
+.event-card .register-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3);
+    background: linear-gradient(to right, #000, #000); /* Black gradient background */
+}
+
+ /* Add foggy overlay */
+ .foggy-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Initial foggy color */
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none; /* Allow interaction with elements underneath */
+    transition: opacity 1s ease; /* Transition for the foggy overlay */
+}
+
+/* Apply animation to the foggy overlay */
+.foggy-overlay.animate-out {
+    opacity: 0;
+}
+  

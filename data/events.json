@@ -1,0 +1,13 @@
+[
+    {
+      "id": 1,
+      "image": "event1.jpg",
+      "title": "Event 1",
+      "description": "Description of Event 1",
+      "tags": ["tag1", "tag2"],
+      "coordinators": ["123-456-7890", "987-654-3210"],
+      "registrationLink": "https://example.com/event1-registration"
+    }
+
+  ]
+  
